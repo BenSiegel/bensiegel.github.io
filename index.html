@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>WareWeGo – Warehouse Intelligence Portal</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="app-shell">
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <div class="logo">
+        <div class="logo-mark">W</div>
+        <div class="logo-text">
+          <span class="logo-title">WareWeGo</span>
+          <span class="logo-subtitle">Warehouse Consulting</span>
+        </div>
+      </div>
+
+      <nav class="nav">
+        <a href="#" class="nav-item active" data-section="overview">
+          <span class="nav-dot"></span>Overview
+        </a>
+        <a href="#" class="nav-item" data-section="wms">
+          <span class="nav-dot"></span>WMS
+        </a>
+        <a href="#" class="nav-item" data-section="analytics">
+          <span class="nav-dot"></span>Analytics
+        </a>
+        <a href="#" class="nav-item" data-section="forecasting">
+          <span class="nav-dot"></span>Forecasting
+        </a>
+        <a href="#" class="nav-item" data-section="portal">
+          <span class="nav-dot"></span>Client Portal
+        </a>
+      </nav>
+
+      <div class="sidebar-footer">
+        <div class="tagline">
+          Data-first warehouse decisions.
+        </div>
+        <button class="btn-outline">Book a consultation</button>
+      </div>
+    </aside>
+
+    <!-- Main content -->
+    <main class="main">
+      <!-- Top bar -->
+      <header class="topbar">
+        <div>
+          <h1 class="page-title">Inventory & Fulfillment Snapshot</h1>
+          <p class="page-subtitle">
+            Unified view of stock, throughput, and forecasted demand across channels.
+          </p>
+        </div>
+        <div class="topbar-actions">
+          <select class="input">
+            <option>All clients</option>
+            <option>Acme Retail</option>
+            <option>Northshore Outfitters</option>
+          </select>
+          <select class="input">
+            <option>Last 30 days</option>
+            <option>Last 7 days</option>
+            <option>Last 90 days</option>
+          </select>
+          <button class="btn-primary">Export report</button>
+        </div>
+      </header>
+
+      <!-- Sections -->
+      <section id="overview" class="section active">
+        <div class="grid grid-3">
+          <div class="card kpi">
+            <div class="kpi-label">Real-time stock accuracy</div>
+            <div class="kpi-value">98.4%</div>
+            <div class="kpi-pill kpi-pill-good">+3.1% vs last month</div>
+            <div class="kpi-sub">Synced from WMS & ERP.</div>
+          </div>
+          <div class="card kpi">
+            <div class="kpi-label">Average pick time</div>
+            <div class="kpi-value">4.6 min</div>
+            <div class="kpi-pill kpi-pill-warn">-18% after layout redesign</div>
+            <div class="kpi-sub">Batch + zone picking workflow.</div>
+          </div>
+          <div class="card kpi">
+            <div class="kpi-label">On-time shipments</div>
+            <div class="kpi-value">96.2%</div>
+            <div class="kpi-pill kpi-pill-good">+6.4% with automation</div>
+            <div class="kpi-sub">Across all sales channels.</div>
+          </div>
+        </div>
+
+        <div class="grid grid-2">
+          <div class="card">
+            <div class="card-header">
+              <h2>Inventory health by category</h2>
+              <span class="pill">Mock chart</span>
+            </div>
+            <div class="chart-placeholder chart-bars">
+              <div class="bar">
+                <span class="bar-label">Apparel</span>
+                <div class="bar-track">
+                  <div class="bar-fill bar-good" style="width: 80%"></div>
+                </div>
+                <span class="bar-value">80% optimal</span>
+              </div>
+              <div class="bar">
+                <span class="bar-label">Home goods</span>
+                <div class="bar-track">
+                  <div class="bar-fill bar-neutral" style="width: 65%"></div>
+                </div>
+                <span class="bar-value">65% optimal</span>
+              </div>
+              <div class="bar">
+                <span class="bar-label">Electronics</span>
+                <div class="bar-track">
+                  <div class="bar-fill bar-risk" style="width: 35%"></div>
+                </div>
+                <span class="bar-value">High overstock</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="card-header">
+              <h2>Fulfillment bottlenecks</h2>
+              <span class="pill pill-red">Alert</span>
+            </div>
+            <ul class="list">
+              <li>
+                <span class="dot dot-red"></span>
+                <div>
+                  <div class="list-title">Packing station 3 at 125% load</div>
+                  <div class="list-sub">Recommend redistributing SKUs and adding staggered shifts.</div>
+                </div>
+              </li>
+              <li>
+                <span class="dot dot-amber"></span>
+                <div>
+                  <div class="list-title">Carrier cut-off miss: West coast</div>
+                  <div class="list-sub">Suggest earlier wave planning for same-day orders.</div>
+                </div>
+              </li>
+              <li>
+                <span class="dot dot-green"></span>
+                <div>
+                  <div class="list-title">Receiving backlog cleared</div>
+                  <div class="list-sub">Dock-to-stock time improved by 22% after process change.</div>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section id="wms" class="section">
+        <div class="card">
+          <div class="card-header">
+            <h2>Warehouse Management System integration</h2>
+          </div>
+          <p>
+            Connect cloud WMS with ERP, marketplaces, and carriers to create a single source of truth for inventory and movements.
+          </p>
+          <div class="grid grid-3">
+            <div class="card card-light">
+              <h3>Live stock map</h3>
+              <p>Bin-level visibility with cycle count recommendations by variance risk.</p>
+            </div>
+            <div class="card card-light">
+              <h3>Smart picking</h3>
+              <p>Support for wave, batch, and zone picking with SLA-aware prioritization.</p>
+            </div>
+            <div class="card card-light">
+              <h3>Exception workflows</h3>
+              <p>Guided flows for shorts, damages, and substitutions with audit history.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="analytics" class="section">
+        <div class="grid grid-2">
+          <div class="card">
+            <div class="card-header">
+              <h2>Operations KPI board</h2>
+              <span class="pill">BI dashboard</span>
+            </div>
+            <ul class="list">
+              <li>
+                <span class="dot dot-blue"></span>
+                <div>
+                  <div class="list-title">Top 10 fastest-moving SKUs</div>
+                  <div class="list-sub">Identify items driving most of the volume for slotting decisions.</div>
+                </div>
+              </li>
+              <li>
+                <span class="dot dot-blue"></span>
+                <div>
+                  <div class="list-title">Channel performance</div>
+                  <div class="list-sub">Compare conversion, order size, and return rates by channel.</div>
+                </div>
+              </li>
+              <li>
+                <span class="dot dot-blue"></span>
+                <div>
+                  <div class="list-title">Warehouse efficiency score</div>
+                  <div class="list-sub">Composite metric blending pick rate, dock-to-stock, and accuracy.</div>
+                </div>
+              </li>
+            </ul>
+          </div>
+
+          <div class="card">
+            <div class="card-header">
+              <h2>Mock trend chart</h2>
+              <span class="pill">Throughput</span>
+            </div>
+            <div class="chart-placeholder chart-lines">
+              <div class="legend">
+                <span class="legend-item">
+                  <span class="legend-swatch swatch-primary"></span> Orders shipped
+                </span>
+                <span class="legend-item">
+                  <span class="legend-swatch swatch-neutral"></span> Orders received
+                </span>
+              </div>
+              <div class="trend-lines">
+                <div class="trend-row">
+                  <span>Week 1</span>
+                  <div class="trend-bar">
+                    <div class="trend-fill primary" style="width: 60%"></div>
+                    <div class="trend-fill neutral" style="width: 55%"></div>
+                  </div>
+                </div>
+                <div class="trend-row">
+                  <span>Week 2</span>
+                  <div class="trend-bar">
+                    <div class="trend-fill primary" style="width: 70%"></div>
+                    <div class="trend-fill neutral" style="width: 62%"></div>
+                  </div>
+                </div>
+                <div class="trend-row">
+                  <span>Week 3</span>
+                  <div class="trend-bar">
+                    <div class="trend-fill primary" style="width: 82%"></div>
+                    <div class="trend-fill neutral" style="width: 74%"></div>
+                  </div>
+                </div>
+                <div class="trend-row">
+                  <span>Week 4</span>
+                  <div class="trend-bar">
+                    <div class="trend-fill primary" style="width: 90%"></div>
+                    <div class="trend-fill neutral" style="width: 80%"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="forecasting" class="section">
+        <div class="card">
+          <div class="card-header">
+            <h2>AI demand forecasting</h2>
+          </div>
+          <p>
+            Simulated controls to represent how WareWeGo could tune ML models around seasonality, promotions, and lead times.
+          </p>
+          <div class="grid grid-2">
+            <div>
+              <label class="field-label">Seasonality sensitivity</label>
+              <input type="range" min="0" max="100" value="70" />
+              <label class="field-label">Promotion uplift factor</label>
+              <input type="range" min="0" max="100" value="40" />
+              <label class="field-label">Supplier lead time (days)</label>
+              <input class="input" type="number" value="18" />
+            </div>
+            <div class="forecast-panel">
+              <div class="forecast-stat">
+                <span class="forecast-label">Projected stockout risk</span>
+                <span class="forecast-value">Low</span>
+              </div>
+              <div class="forecast-stat">
+                <span class="forecast-label">Recommended safety stock</span>
+                <span class="forecast-value">+12%</span>
+              </div>
+              <div class="forecast-note">
+                Adjust sliders to demo how advisory recommendations could change before peak events.
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="portal" class="section">
+        <div class="grid grid-2">
+          <div class="card">
+            <div class="card-header">
+              <h2>Client workspace</h2>
+            </div>
+            <p>
+              Secure area where clients review KPIs, download playbooks, and request changes to workflows in real time.
+            </p>
+            <form class="portal-form">
+              <label class="field-label">Start a new engagement brief</label>
+              <input class="input" type="text" placeholder="e.g., Q4 peak readiness" />
+              <label class="field-label">Primary objective</label>
+              <select class="input">
+                <option>Improve pick speed</option>
+                <option>Reduce stockouts</option>
+                <option>Reduce carrying cost</option>
+                <option>Multi-warehouse rollout</option>
+              </select>
+              <label class="field-label">Notes for consultant</label>
+              <textarea class="input" rows="4" placeholder="Share current pain points, constraints, and timelines."></textarea>
+              <button type="button" class="btn-primary">Submit to WareWeGo</button>
+            </form>
+          </div>
+
+          <div class="card">
+            <div class="card-header">
+              <h2>Engagement timeline</h2>
+            </div>
+            <ol class="timeline">
+              <li>
+                <span class="timeline-dot"></span>
+                <div>
+                  <div class="timeline-title">Discovery & data audit</div>
+                  <div class="timeline-sub">Connect WMS, ERP, marketplaces, and shipping data sources.</div>
+                </div>
+              </li>
+              <li>
+                <span class="timeline-dot"></span>
+                <div>
+                  <div class="timeline-title">Warehouse walk-through</div>
+                  <div class="timeline-sub">Map current flows from receiving to outbound, highlight waste.</div>
+                </div>
+              </li>
+              <li>
+                <span class="timeline-dot"></span>
+                <div>
+                  <div class="timeline-title">Design & pilot</div>
+                  <div class="timeline-sub">Configure dashboards, forecasting models, and layout changes.</div>
+                </div>
+              </li>
+              <li>
+                <span class="timeline-dot"></span>
+                <div>
+                  <div class="timeline-title">Rollout & training</div>
+                  <div class="timeline-sub">Coach teams and monitor KPIs to lock in improvements.</div>
+                </div>
+              </li>
+            </ol>
+          </div>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
+
