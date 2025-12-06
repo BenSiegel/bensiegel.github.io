@@ -154,6 +154,53 @@
         </div>
       </section>
 
+          <!-- Mock Warehouse Heatmap -->
+    <section class="section" id="warehouse-heatmap">
+      <div class="section-header">
+        <h2>Mock warehouse heatmap</h2>
+        <p>Simulated pick density and congestion zones across the floor.</p>
+      </div>
+
+      <div class="card-grid heatmap-grid">
+        <div class="card heatmap-legend">
+          <h3>Legend</h3>
+          <ul>
+            <li><span class="heat-dot low"></span> Low activity</li>
+            <li><span class="heat-dot medium"></span> Normal activity</li>
+            <li><span class="heat-dot high"></span> High activity</li>
+            <li><span class="heat-dot critical"></span> Congestion risk</li>
+          </ul>
+        </div>
+
+        <div class="card heatmap-map">
+          <div class="heatmap-row">
+            <span class="heat-cell medium"></span>
+            <span class="heat-cell high"></span>
+            <span class="heat-cell high"></span>
+            <span class="heat-cell medium"></span>
+          </div>
+          <div class="heatmap-row">
+            <span class="heat-cell low"></span>
+            <span class="heat-cell medium"></span>
+            <span class="heat-cell high"></span>
+            <span class="heat-cell critical"></span>
+          </div>
+          <div class="heatmap-row">
+            <span class="heat-cell low"></span>
+            <span class="heat-cell low"></span>
+            <span class="heat-cell medium"></span>
+            <span class="heat-cell high"></span>
+          </div>
+          <div class="heatmap-row">
+            <span class="heat-cell receiving medium">Receiving</span>
+            <span class="heat-cell storage low">Storage</span>
+            <span class="heat-cell packing high">Packing</span>
+            <span class="heat-cell shipping critical">Shipping</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
       <section id="wms" class="section">
         <div class="card">
           <div class="card-header">

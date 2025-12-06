@@ -590,3 +590,95 @@ textarea.input {
   display: block;
 }
 
+/* Warehouse heatmap */
+
+.heatmap-grid {
+  display: grid;
+  gap: 1.5rem;
+  grid-template-columns: minmax(0, 1.2fr) minmax(0, 2fr);
+}
+
+@media (max-width: 800px) {
+  .heatmap-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+
+.heatmap-legend ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  gap: 0.5rem;
+}
+
+.heat-dot {
+  display: inline-block;
+  width: 0.85rem;
+  height: 0.85rem;
+  border-radius: 999px;
+  margin-right: 0.5rem;
+  background: var(--gray-400);
+}
+
+.heat-dot.low {
+  background: #3b82f6; /* cool / low */
+}
+
+.heat-dot.medium {
+  background: #22c55e; /* medium */
+}
+
+.heat-dot.high {
+  background: #f97316; /* high */
+}
+
+.heat-dot.critical {
+  background: #ef4444; /* critical */
+}
+
+.heatmap-map {
+  display: inline-flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  align-items: center;
+}
+
+.heatmap-row {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.heat-cell {
+  width: 3rem;
+  height: 2.2rem;
+  border-radius: 0.35rem;
+  background: var(--gray-700);
+  position: relative;
+  font-size: 0.7rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: rgba(255, 255, 255, 0.75);
+}
+
+.heat-cell.low {
+  background: rgba(59, 130, 246, 0.25);
+  box-shadow: 0 0 0 1px rgba(59, 130, 246, 0.3);
+}
+
+.heat-cell.medium {
+  background: rgba(34, 197, 94, 0.28);
+  box-shadow: 0 0 0 1px rgba(34, 197, 94, 0.35);
+}
+
+.heat-cell.high {
+  background: rgba(249, 115, 22, 0.4);
+  box-shadow: 0 0 0 1px rgba(249, 115, 22, 0.45);
+}
+
+.heat-cell.critical {
+  background: rgba(239, 68, 68, 0.45);
+  box-shadow: 0 0 0 1px rgba(239, 68, 68, 0.55);
+}
+
